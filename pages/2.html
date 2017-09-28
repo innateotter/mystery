@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script
+	src="https://code.jquery.com/jquery-2.2.4.min.js"
+	integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+
+<style>
+body {
+	background: #333333;
+	font-family: "Lucida Grande", Helvetica;
+	color: #f9f9f9;
+	font-size: 18px;
+	line-height: 1.4;
+	//color: grey;
+}
+.options a {
+	display: block;
+	margin-bottom: 15px;
+	color: grey;
+	text-decoration: none;
+}
+
+
+.options a:link,
+.options a:visited {
+
+}
+.options a:hover,
+.options a:active {
+	color: #eee;
+	// put a zoom in here
+}
+
+.divider {
+    height: 1px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    padding: 0;
+    display: block;
+    background-color: #ddd;
+    zoom: 1;
+    margin-bottom: 15px;
+	margin-top: 15px;
+}
+</style>
+
+
+<script type='text/javascript'>
+
+  $(document).ready(function(){
+		$('.music-js').click(function(e){
+			e.preventDefault();
+			document.getElementById('theme-js').play();
+
+			$('.buttons-js').fadeOut(3000, function(){
+				$('.text-js').fadeIn(5000);
+			});
+			
+		});
+
+		$('.no-music-js').click(function(e){
+			e.preventDefault();
+		
+			$('#theme-js').hide();
+
+			$('.buttons-js').fadeOut(1000, function(){
+				$('.text-js').fadeIn(2000);
+			});
+			
+		});
+  });
+
+
+</script>
+
+
+</head>
+
+<body>
+
+
+	<div class="container buttons-js">
+			<br>
+			<br>	
+		<div class="options col-xs-12">
+				<a class="music-js" href="#"><em>If you want to play music, choose this one</em></a>
+				<a class="no-music-js" href="#"><em>If you don't want music, choose this one</em></a>				
+			</div>
+			<br>
+			<br>
+			<br>
+		</div>	
+	</div>
+
+	<div style="display:none;"" class="container text-js">			
+		<div class="col-xs-12">
+			<br>
+				<img style="width:auto; margin:0 auto; display:block;" src="../images/loop/logo.png" alt="">
+				
+				<br>
+
+				<audio id="theme-js" controls style="float:right;" src="../music/stranger.m4a">
+					<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+					</audio>
+
+			<h2 style="margin:0 auto;">Tales From The Loop</h2>
+			<br>
+			<div style="margin-top:15px;">
+				<p>
+					Stranger Things, The Goonies, Monster Squad. This is the RPG equivalent. (Though mostly I think it'll play like the Goonies.)
+				</p
+				<p>						
+					You will play a character between the ages of 10 and 15, living in an alternate universe version of the 1980s that has elements of super science.
+				</p>
+				<p>
+					It’s a pretty rules-lite game. (You can’t really min-max a 10 year old.) It’s also a bit different from other RPGs like Dungeons & Dragons in that players are expected to give a lot of input to their own scenes and the backstory is a big part of the game. Basically coming up with their relationships with the other kids, with their parents/teachers/other adults (who they will have scenes with). 
+				</p>
+				<p>
+					I’d like to do a one-shot before Halloween. It should take 3-5 hours.
+				</p>
+
+
+			</div>
+
+
+			<div class="divider"></div>
+			<div class="options col-xs-12">
+				<a href="https://beta.doodle.com/poll/ip5x98f73gsuxce2"><em>If you want to play, fill out this Doodle poll. (Also think about what type of Goonie/Breakfast Club stereotype you'd like to be, and choose your 80s theme song.)</em></a>
+			</div>
+			<br>
+			<br>
+			<br>
+		</div>			
+	</div>
+
+
+
+
+</body>
+
+
+
+
+</html>
