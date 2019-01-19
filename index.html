@@ -11,50 +11,62 @@
 
 <style>
 body {
-	background: #fff9e7;
+	//background: #fff9e7;
 	font-family: "Lucida Grande", Helvetica;
 	color: #666;
 	font-size: 18px;
 	line-height: 1.4;
+	background: url(images/falcon-controls.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
-.options a {
+
+
+.controls {
+	outline: red 20px;
 	display: block;
-	margin-bottom: 15px;
-	color: grey;
-	text-decoration: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 15%;
+	background: blue;
+}
+
+.fixcontrols {
+	outline: orange 20px;
+	background: green;
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 15%;
 }
 
 
-.options a:link,
-.options a:visited {
-
-}
-.options a:hover,
-.options a:active {
-	color: #554141;
-	// put a zoom in here
-}
-
-.divider {
-    height: 1px;
-    border: 0;
-    margin: 0;
-    padding: 0;
-    padding: 0;
-    display: block;
-    background-color: #ddd;
-    zoom: 1;
-    margin-bottom: 15px;
-	margin-top: 15px;
-}
 </style>
 
 
 <script type='text/javascript'>
 
   $(document).ready(function(){
-
-
+	var IFixedIt = false;  
+	$('.controls').on('click', function(e){
+		e.preventDefault();
+		if (IFixedIt === true){
+			window.location.href = 'https://www.youtube.com/watch?v=tAWd9lrl1lo';
+		} else {
+			document.getElementById('theme-js').play();
+		}
+	
+	})
+	$('.fixcontrols').on('click', function(e){
+		IFixedIt = true;
+		e.preventDefault();
+	})
   });
 
 
@@ -66,25 +78,13 @@ body {
 <body>
 
 
+<a class="controls" href="#"></a>
 
+<a class="fixcontrols" href="#"></a>
 
-	<img style="width:auto; margin:0 auto; display:block;" src="images/covers/choose_your_own_adventure.jpg" alt="">
-	
-	<br>
-			<img style="width:auto; margin:0 auto; display:block;" src="images/pick-adventure-note.jpg" alt="">
-
-<br>
-
-<div class="container">
-	<div class="divider"></div>
-	<div class="options col-xs-12">
-		<a href="pages/12.html"><em>If you wish to join an adventure, turn to page 12.</em></a>
-		<a href="#"><em>If you are not interested in adventure, I dunno, go watch a movie or something.</em></a>
-	</div>
-	<br>
-	<br>
-	<br>	
-</div>
+<audio id="theme-js" controls style="float:right;" src="./music/failure.m4a">
+	<p>If you are reading this, it is because your browser does not support the audio element.     </p>
+	</audio>
 
 
 
