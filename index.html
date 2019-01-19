@@ -25,19 +25,15 @@ body {
 
 
 .controls {
-	outline: red 20px;
 	display: block;
 	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 15%;
-	background: blue;
 }
 
 .fixcontrols {
-	outline: orange 20px;
-	background: green;
 	display: block;
 	position: absolute;
 	left: 0;
@@ -57,7 +53,7 @@ body {
 	$('.controls').on('click', function(e){
 		e.preventDefault();
 		if (IFixedIt === true){
-			window.location.href = 'https://www.youtube.com/watch?v=tAWd9lrl1lo';
+			window.location.href = 'https://www.youtube.com/watch?v=tAWd9lrl1lo?rel=0&amp;autoplay=1;fs=0;autohide=0;hd=0;';
 		} else {
 			document.getElementById('theme-js').play();
 		}
